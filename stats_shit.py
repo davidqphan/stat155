@@ -5,6 +5,7 @@ import statistics as stats
 
 def main(user_input):
 
+    # if input is txt file, parse as file, else parse as string
     if os.path.isfile(user_input):
          with open(user_input) as f:
             nums = f.read().split()
