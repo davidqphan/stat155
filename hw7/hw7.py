@@ -13,7 +13,6 @@ from collections import OrderedDict
 
 def book():
     book_red, book_func = parse_numbers('book')
-
     hour = book_red[0]
     coeff, a, b = book_func[0][:]
 
@@ -26,7 +25,6 @@ def book():
 
 def chemical():
     chem_red, chem_func = parse_numbers('chemical')
-
     A, B, b_a, b_b, c_a, c_b, d_a, d_b = chem_red[:]
     coeff = 1/(B-A)
 
@@ -40,7 +38,6 @@ def chemical():
 
 def checkout():
     check_red, check_func = parse_numbers('checkout')
-
     coeff, a, b = check_func[1][:]
 
     a_sol = (coeff/25) * (1**2)
@@ -61,9 +58,7 @@ def checkout():
     print('checkout')
 
 def weight():
-
     weight_red, weight_func = parse_numbers('weight')
-
     weight, a, b = weight_func[0][:]
 
     u_a = a - weight
@@ -91,9 +86,7 @@ def weight():
     print_solns(solns)
 
 def measurement():
-
     msmt_red, msmt_func = parse_numbers('measurement')
-
     k, n, a, b = msmt_func[0][:]
 
     a_sol = 'aint nobody got time to draw graphs'
@@ -105,7 +98,6 @@ def measurement():
     print_solns(solns)
 
 def ecologist():
-
     eco_red, eco_func = parse_numbers('ecologist')
     radius = eco_red[0]
     k, n, a, b = eco_func[0][:]
@@ -120,7 +112,6 @@ def ecologist():
     print_solns(solns)
 
 def laser():
-
     laser_red, laser_func = parse_numbers('laser')
     i, j, k, a, b = laser_func[1][:]
 
@@ -189,7 +180,6 @@ def print_solns(solutions):
         print('part {}: {}\n'.format(part, d[part]))
 
 def map_sol(solutions):
-
     parts = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' ]
 
     d = OrderedDict()
@@ -210,7 +200,6 @@ def integral(lower, upper, a, power, b, c):
     return ans
 
 def parse_numbers(obj):
-
     prob_obj = parse_object(obj)
 
     reds = prob_obj['reds']
@@ -267,7 +256,6 @@ def main():
         if int(sel) >= 1 and int(sel) <= len(options):
             print(int(sel))
             options[int(sel)]()
-
 
 if __name__ == "__main__":
     main()
