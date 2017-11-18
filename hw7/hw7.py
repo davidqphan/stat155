@@ -122,7 +122,8 @@ def laser():
     b_sol = round(f(1) - f(-1), 4)
     c_sol = round(1 - f(0.5), 4)
     d_sol = str(str(j) + ' * (' + str(k) + '-' + 'x^2)')
-    solns = [ a_sol, b_sol, c_sol, d_sol ]
+    e_sol = 0
+    solns = [ a_sol, b_sol, c_sol, d_sol, e_sol ]
 
     print_solns(solns)
 
